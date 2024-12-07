@@ -1,7 +1,4 @@
-volumes:
-  data:
-
-services:
+ggservices:
   mosquitto:
     container_name: "mosquitto"
     restart: "unless-stopped"
