@@ -1,4 +1,4 @@
-ggservices:
+services:
   mosquitto:
     container_name: "mosquitto"
     restart: "unless-stopped"
