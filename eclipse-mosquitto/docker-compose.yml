@@ -1,21 +1,14 @@
-volumes:
-  data:
+version: '3.8'
 
 services:
   mosquitto:
-    container_name: "mosquitto"
-    restart: "unless-stopped"
-    environment:
-      - "TZ=Europe/Berlin"
-
-    hostname: "mqtt"
-    image: "eclipse-mosquitto"
-    network_mode: host
+    image: eclipse-mosquitto:2.0
+    container_name: mosquitto
     ports:
-      - "1883:1883/tcp"
-
+      - "1883:1883"
+      - "9001:9001"
     volumes:
-      - "/etc/localtime:/etc/localtime:ro"
-      - "data:/mosquitto/config"
-      - "data:/mosquitto/data"
-      - "data:/mosquitto/log"
+      - "./config:/mosquitto/config"
+      - "./data:/mosquitto/data"
+      - "./log:/mosquitto/log"
+    restart: unless-stopped
