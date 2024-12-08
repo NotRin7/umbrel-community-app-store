@@ -1,10 +1,10 @@
 manifestVersion: 1
-id: reddexx-crafty
+id: crafty
 name: Crafty
 tagline: 
 icon: https://gitlab.com/uploads/-/system/project/avatar/20430749/Crafty_4-0_Logo_square.ico
 category: Hosting
-version: "1.0.4"
+version: "1.0.3"
 port: 8543
 description: >-
   Install Crafty-Controller on Umbrel
@@ -18,7 +18,7 @@ description: >-
 
 developer: Arcadia Technology
 website: https://craftycontrol.com/
-submitter: Reddexx
+submitter: NotRin7
 submission:
 repo:
 support: 

@@ -10,9 +10,9 @@ services:
     ports:
         - "8500:8000" # HTTP
         - "8543:8443" # HTTPS
+        - "111:111" # DYNMAP
         - "19132:19132/udp" # BEDROCK
         - "25500-25600:25500-25600" # MC SERV PORT RANGE
-        - "24454:24454" # Voicechat
     volumes:
         - /Container/Minecraft/backups:/crafty/backups
         - /Container/Minecraft/logs:/crafty/logs
