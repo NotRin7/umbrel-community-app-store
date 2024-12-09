@@ -2,7 +2,7 @@ manifestVersion: 1
 id: notrin-eclipse-mosquitto
 name: Eclipse Mosquitto
 tagline: Lightweight MQTT broker for IoT communication
-icon: https://mosquitto.org/stuff/logo.png
+icon: https://i.ibb.co/hWyQpzJ/logo-1720462183778.png
 category: Networking
 version: "1.0.0"
 port: 1883
@@ -18,12 +18,11 @@ submission: https://github.com/NotRin7/umbrel-community-app-store
 repo: https://github.com/NotRin7/umbrel-community-app-store
 support: https://github.com/NotRin7/umbrel-community-app-store/issues
 gallery:
-  - https://mosquitto.org/stuff/mosquitto-diagram.png
-  - https://mosquitto.org/stuff/mosquitto-logo.png
+  - https://i.ibb.co/hWyQpzJ/logo-1720462183778.png
 releaseNotes: >-
   Initial release of Eclipse Mosquitto for Umbrel OS.
 
 dependencies: []
 path: ""
 defaultUsername: ""
-defaultPassword: ""
+defaultPassword: "set um via container shell"
