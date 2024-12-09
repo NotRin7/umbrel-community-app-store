@@ -16,3 +16,7 @@ volumes:
   data:
   log:
 
+networks:
+    mosquitto:
+        name: mosquitto
+        driver: bridge
