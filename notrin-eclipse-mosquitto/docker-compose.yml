@@ -8,6 +8,6 @@ services:
     ports:
       - "1883:1883"
     volumes:
-      - "/home/umbrel/eclipse-mosquitto/config:/mosquitto/config"
-      - "/home/umbrel/eclipse-mosquitto/data:/mosquitto/data"
-      - "/home/umbrel/eclipse-mosquitto/log:/mosquitto/log"
+      - "./config:/mosquitto/config"
+      - "./data:/mosquitto/data"
+      - "./log:/mosquitto/log"
