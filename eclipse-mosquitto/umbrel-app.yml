@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: eclipse-mosquitto
+id: notrin-eclipse-mosquitto
 name: Eclipse Mosquitto
 tagline: Lightweight MQTT broker for IoT communication
 icon: https://mosquitto.org/stuff/logo.png
