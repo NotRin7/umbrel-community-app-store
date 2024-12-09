@@ -1,12 +1,12 @@
 version: '3.8'
 
 services:
-  mosquitto:
-    container_name: mosquitto
-    image: eclipse-mosquitto
-    restart: always
-    ports:
-      - "1883:1883"
+    mosquitto:
+        image: eclipse-mosquitto:2
+        ports:
+            - 1883:1883
+            - 8883:8883
+            - 9001:9001
         volumes:
             - ./mosquitto/config:/mosquitto/config
             - ./mosquitto/data:/mosquitto/data
@@ -16,4 +16,4 @@ services:
 networks:
     mosquitto:
         name: mosquitto
-        driver: host
+        driver: bridge
