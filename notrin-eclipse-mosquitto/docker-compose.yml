@@ -1,25 +1,16 @@
+version: '3.8'
 
-version: "3.7"
 services:
-  # mqtt5 eclipse-mosquitto
-  mqtt5:
+  mosquitto:
+    container_name: mosquitto
     image: eclipse-mosquitto
-    container_name: mqtt5
+    restart: always
     ports:
-      - "1883:1883" #default mqtt port
-      - "9001:9001" #default mqtt port for websockets
+      - "1883:1883"
     volumes:
-      - ./config:/mosquitto/config:rw
-      - ./data:/mosquitto/data:rw
-      - ./log:/mosquitto/log:rw
-    restart: unless-stopped
-
-# volumes for mapping data,config and log
-volumes:
-  config:
-  data:
-  log:
-
-networks:
-  default:
-    name: mqtt5-network
+      - "/home/umbrel/eclipse-mosquitto/config:/mosquitto/config"
+      - "/home/umbrel/eclipse-mosquitto/data:/mosquitto/data"
+      - "/home/umbrel/eclipse-mosquitto/log:/mosquitto/log"
+      - "./config:/mosquitto/config"
+      - "./data:/mosquitto/data"
+      - "./log:/mosquitto/log"
