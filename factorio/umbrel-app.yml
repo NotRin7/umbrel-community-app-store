@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: reddexx-factorio
+id: notrin-factorio
 name: Factorio Server
 tagline: 
 icon: https://aurafurygaming.com/images/icons/dcai7fe-1c8cf013-6c9e-444c-94a1-8c65f9ae7805.png
@@ -8,12 +8,12 @@ version: "1.0.0"
 port: 9711
 description: >
   Install Factorio Server with OFSM Webinterface on Umbrel
-  This tool runs on a Factorio server and allows management of the Factorio server, saves, mods and many other features.
+  This tool runs a Factorio server and allows management of the Factorio server, saves, mods and many other features.
   
-  Password see you in the first start Logs!
+  Password in the first start Logs!
 developer: OpenFactorioServerManager
 website: https://github.com/OpenFactorioServerManager
-submitter: Reddexx
+submitter: NotRin7
 submission:
 repo:
 support: 
@@ -26,4 +26,4 @@ releaseNotes: >
 dependencies: []
 path: ""
 defaultUsername: "admin"
-defaultPassword: ""
+defaultPassword: "Password in the first start Logs!"
