@@ -19,4 +19,4 @@ volumes:
 networks:
     mosquitto:
         name: mosquitto
-        driver: bridge
+        driver: host
