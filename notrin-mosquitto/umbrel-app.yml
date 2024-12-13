@@ -1,5 +1,5 @@
 manifestVersion: 1
-id: mosquitto
+id: notrin-mosquitto
 name: Mosquitto
 tagline: An open source MQTT broker
 icon: ""
@@ -16,7 +16,7 @@ description: >-
   The Mosquitto project also provides a C library for implementing MQTT clients, and the very popular mosquitto_pub and mosquitto_sub command line MQTT clients.
 developer: Eclipse Foundation
 website: https://mosquitto.org/
-submitter: dirstel
+submitter: NotRin7
 submission: https://github.com/getumbrel/umbrel-apps/pull/1789
 repo: https://github.com/eclipse-mosquitto/mosquitto
 support: https://github.com/eclipse-mosquitto/mosquitto
