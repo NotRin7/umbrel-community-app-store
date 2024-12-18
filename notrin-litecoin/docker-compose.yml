@@ -9,13 +9,13 @@ services:
       - "9332:9332" # JSON-RPC-Port
       - "9333:9333" # P2P-Port
     environment:
-      LITECOIN_NETWORK: mainnet
-      LITECOIN_RPC_USER: your_rpc_user
-      LITECOIN_RPC_PASSWORD: your_rpc_password
+      LITECOIN_NETWORK: "mainnet"
+      LITECOIN_RPC_USER: "your_rpc_user"
+      LITECOIN_RPC_PASSWORD: "your_rpc_password"
       LITECOIN_EXTRA_ARGS: "-printtoconsole -txindex=1"
     volumes:
-      - ${APP_DATA_DIR}/data/app:/data # volume to persist advanced settings json
-      - ${APP_LITECOIN_DATA_DIR}:/litecoin/.litecoin # volume to persist litecoin.conf
+      - /Container/Litecoin/data:/data # volume to persist advanced settings json
+      - /Container/Litecoin/litecoin:/litecoin/.litecoin # volume to persist litecoin.conf
     networks:
       umbrel_default:
         aliases:
