@@ -3,6 +3,7 @@ id: notrin-litecoin
 category: litecoin
 name: Litecoin Node
 version: "0.21.2"
+port: 2100
 tagline: Run your personal node powered by Litecoin Core
 description: >-
   Run your Litecoin node and independently store and validate
@@ -25,54 +26,13 @@ or worse — lie to you.
 
 
   An official app for Litecoin Core.
-developer: NotRin7
+developer: Litecoin Developers
 website: https://litecoin.org
-dependencies: []
+submitter: NotRin7
 repo: https://github.com/uphold/docker-litecoin-core
 support: https://litecointalk.io
-port: 2100
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
+gallery: []
+releaseNotes: ""
+dependencies: []
 path: ""
-defaultPassword: ""
-releaseNotes: >-
-  Highlights:
-    - Litecoin Core Update: Litecoin Core has been updated to v0.21.2, which includes new features, bug fixes, and performance improvements. See the full Litecoin Core release notes at https://github.com/litecoin-project/litecoin/blob/master/doc/release-notes.md
-widgets:
-  - id: "stats"
-    type: "four-stats"
-    refresh: "5s"
-    endpoint: "litecoind:9332/widgets/stats"
-    link: ""
-    example:
-      type: "four-stats"
-      link: ""
-      items:
-        - title: "Connections"
-          text: "11"
-          subtext: "peers"
-        - title: "Mempool"
-          text: "50"
-          subtext: "MB"
-        - title: "Hashrate"
-          text: "300"
-          subtext: "TH/s"
-        - title: "Blockchain size"
-          text: "80"
-          subtext: "GB"
-  - id: "sync"
-    type: "text-with-progress"
-    refresh: "2s"
-    endpoint: "litecoind:9332/widgets/sync"
-    link: ""
-    example:
-      type: "text-with-progress"
-      link: ""
-      title: "Blockchain sync"
-      text: "83%"
-      progressLabel: "In progress"
-      progress: 0.83
-submitter: Community
-submission: https://github.com/uphold/docker-litecoin-core
+defaultUsername: ""
