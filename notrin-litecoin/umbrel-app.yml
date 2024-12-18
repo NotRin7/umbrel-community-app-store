@@ -5,7 +5,7 @@ tagline:
 icon: https://i.ibb.co/M22sWmM/proxy-image-4.jpg
 category: Hosting
 version: "0.21.4"
-port: 8543
+port: 10102
 description: >-
   Run your Litecoin node and independently store and validate
   every single Litecoin transaction with it.
