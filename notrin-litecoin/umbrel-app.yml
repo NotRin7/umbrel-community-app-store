@@ -1,5 +1,5 @@
 manifestVersion: 1.1
-id: litecoin
+id: notrin-litecoin
 category: litecoin
 name: Litecoin Node
 version: "0.21.2"
