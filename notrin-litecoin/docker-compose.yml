@@ -1,0 +1,33 @@
+version: "3.7"
+
+services:
+  litecoin_proxy:
+    environment:
+      APP_HOST: $APP_LITECOIN_IP
+      APP_PORT: 3006
+  
+  litecoind:
+    image: uphold/litecoin-core:latest
+    container_name: litecoind
+    depends_on: []
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data/app:/data # volume to persist advanced settings json
+      - ${APP_LITECOIN_DATA_DIR}:/litecoin/.litecoin # volume to persist litecoin.conf
+    environment:
+      LITECOIN_RPC_USER: "${APP_LITECOIN_RPC_USER}"
+      LITECOIN_RPC_PASSWORD: "${APP_LITECOIN_RPC_PASS}"
+      LITECOIN_RPC_PORT: "${APP_LITECOIN_RPC_PORT}"
+      LITECOIN_P2P_PORT: "${APP_LITECOIN_P2P_PORT}"
+      LITECOIN_EXTRA_ARGS: "-printtoconsole -server=1 -rpcallowip=::/0 -rpcbind=0.0.0.0"
+      DEVICE_DOMAIN_NAME: "${DEVICE_DOMAIN_NAME}"
+    ports:
+      - "${APP_LITECOIN_P2P_PORT}:${APP_LITECOIN_P2P_PORT}"
+      - "${APP_LITECOIN_RPC_PORT}:${APP_LITECOIN_RPC_PORT}"
+    networks:
+      default:
+        ipv4_address: $APP_LITECOIN_IP
+
+volumes:
+  litecoin_data:
+    driver: local
