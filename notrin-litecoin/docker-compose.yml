@@ -1,33 +1,25 @@
-version: "3.7"
+version: '3.7'
 
 services:
-  litecoin_proxy:
-    environment:
-      APP_HOST: $APP_LITECOIN_IP
-      APP_PORT: 3006
-  
-  litecoind:
+  litecoin:
     image: uphold/litecoin-core:latest
-    container_name: litecoind
-    depends_on: []
-    restart: on-failure
-    volumes:
-      - ${APP_DATA_DIR}/data/app:/data # volume to persist advanced settings json
-      - ${APP_LITECOIN_DATA_DIR}:/litecoin/.litecoin # volume to persist litecoin.conf
-    environment:
-      LITECOIN_RPC_USER: "${APP_LITECOIN_RPC_USER}"
-      LITECOIN_RPC_PASSWORD: "${APP_LITECOIN_RPC_PASS}"
-      LITECOIN_RPC_PORT: "${APP_LITECOIN_RPC_PORT}"
-      LITECOIN_P2P_PORT: "${APP_LITECOIN_P2P_PORT}"
-      LITECOIN_EXTRA_ARGS: "-printtoconsole -server=1 -rpcallowip=::/0 -rpcbind=0.0.0.0"
-      DEVICE_DOMAIN_NAME: "${DEVICE_DOMAIN_NAME}"
+    container_name: litecoin
+    restart: unless-stopped
     ports:
-      - "${APP_LITECOIN_P2P_PORT}:${APP_LITECOIN_P2P_PORT}"
-      - "${APP_LITECOIN_RPC_PORT}:${APP_LITECOIN_RPC_PORT}"
+      - "9332:9332" # JSON-RPC-Port
+      - "9333:9333" # P2P-Port
+    environment:
+      LITECOIN_NETWORK: mainnet
+      LITECOIN_RPC_USER: your_rpc_user
+      LITECOIN_RPC_PASSWORD: your_rpc_password
+      LITECOIN_EXTRA_ARGS: "-printtoconsole -txindex=1"
+    volumes:
+      - ./litecoin-data:/home/litecoin/.litecoin
     networks:
-      default:
-        ipv4_address: $APP_LITECOIN_IP
+      umbrel_default:
+        aliases:
+          - litecoin
 
-volumes:
-  litecoin_data:
-    driver: local
+networks:
+  umbrel_default:
+    external: true
