@@ -16,3 +16,6 @@ services:
     ports:
       - "9332:9332"
       - "9333:9333"
+    volumes:
+      - ${APP_DATA_DIR}/data:/data
+      - ${APP_DATA_DIR}/data/litecoin:/litecoin/.litecoin
