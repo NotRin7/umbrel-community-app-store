@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   litecoin:
-    image: uphold/litecoin-core:latest
+    image: uphold/litecoind:latest
     container_name: litecoin
     restart: unless-stopped
     ports:
@@ -14,8 +14,8 @@ services:
       - LITECOIN_RPC_PASSWORD=your_rpc_password
       - LITECOIN_EXTRA_ARGS=-printtoconsole -txindex=1
     volumes:
-      - /Container/Litecoin/data:/data
-      - /Container/Litecoin/litecoin:/litecoin/.litecoin
+      - /Container/Litecoin/data:/data # Persistent blockchain data
+      - /Container/Litecoin/litecoin:/litecoin/.litecoin # Persistent config directory
     networks:
       umbrel_default:
         aliases:
