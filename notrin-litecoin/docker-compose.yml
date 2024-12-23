@@ -2,17 +2,20 @@ version: '3.7'
 
 services:
   litecoin:
-    image: uphold/litecoin-core:latest
+    image: litecoinproject/litecoin-core:latest
     container_name: litecoin
     restart: unless-stopped
+    command:
+      - -printtoconsole
+      - -regtest=1
+      - -server=1
+      - -rpcuser=testuser
+      - -rpcpassword=testpass
+      - -txindex=1
+      - -datadir=/litecoin/.litecoin
     ports:
       - "9332:9332"
       - "9333:9333"
-    environment:
-      - LITECOIN_NETWORK=mainnet
-      - LITECOIN_RPC_USER=testuser
-      - LITECOIN_RPC_PASSWORD=testpass
-      - LITECOIN_EXTRA_ARGS=-printtoconsole -txindex=1
     volumes:
       - /Container/Litecoin/data:/data
       - /Container/Litecoin/litecoin:/litecoin/.litecoin
