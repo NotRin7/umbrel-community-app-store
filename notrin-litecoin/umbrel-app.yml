@@ -3,7 +3,7 @@ id: notrin-litecoin
 name: Litecoin (WIP)
 tagline: 
 icon: https://i.ibb.co/M22sWmM/proxy-image-4.jpg
-category: Hosting
+category: Litecoin
 version: "0.21.4"
 port: 10102
 description: >-
