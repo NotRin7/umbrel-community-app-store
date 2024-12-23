@@ -17,3 +17,6 @@ services:
     ports:
       - "9332:9332"
       - "9333:9333"
+    volumes:
+      - /Container/Litecoin/data:/data
+      - /Container/Litecoin/litecoin:/litecoin/.litecoin
