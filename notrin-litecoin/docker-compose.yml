@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   litecoin:
-    image: lncm/litecoin:latest # ARM-kompatibles Image
+    image: uphold/litecoin-core:latest
     container_name: litecoin
     restart: unless-stopped
     ports:
