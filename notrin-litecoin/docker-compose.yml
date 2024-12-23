@@ -6,10 +6,13 @@ services:
     container_name: litecoin
     restart: unless-stopped
     ports:
-      - "9332:9332"
-      - "9333:9333"
+      - "9332:9332" # JSON-RPC-Port
+      - "9333:9333" # P2P-Port
     environment:
       - LITECOIN_NETWORK=mainnet
       - LITECOIN_RPC_USER=testuser
       - LITECOIN_RPC_PASSWORD=testpass
       - LITECOIN_EXTRA_ARGS=-printtoconsole -txindex=1
+    volumes:
+      - /Container/Litecoin/data:/data # Blockchain-Daten
+      - /Container/Litecoin/litecoin:/litecoin/.litecoin # Konfigurationsdateien
