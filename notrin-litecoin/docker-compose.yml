@@ -12,3 +12,4 @@ services:
       - LITECOIN_NETWORK=mainnet
       - LITECOIN_RPC_USER=testuser
       - LITECOIN_RPC_PASSWORD=testpass
+      - LITECOIN_EXTRA_ARGS=-printtoconsole -txindex=1
