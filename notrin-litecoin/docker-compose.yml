@@ -12,6 +12,7 @@ services:
       - -rpcuser=testuser
       - -rpcpassword=testpass
       - -txindex=1
+      - -addnode=164.132.170.197
       - -datadir=/litecoin/.litecoin
     ports:
       - "9332:9332"
