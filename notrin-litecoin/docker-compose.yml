@@ -14,7 +14,6 @@ services:
       - -bind=0.0.0.0
       - -txindex=1
       - -datadir=/home/litecoin/.litecoin
-      - -regtest=1
     ports:
       - "9332:9332"
       - "9333:9333"
