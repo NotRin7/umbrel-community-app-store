@@ -11,8 +11,12 @@ services:
       - -rpcuser=testuser
       - -rpcpassword=testpass
       - -rpcport=9332
+      - -bind=0.0.0.0
       - -txindex=1
       - -datadir=/litecoin/.litecoin
     ports:
       - "9332:9332"
       - "9333:9333"
+    volumes:
+      - ${APP_DATA_DIR}/data:/data
+      - ${APP_DATA_DIR}/data/litecoin:/litecoin/.litecoin
