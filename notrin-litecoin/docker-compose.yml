@@ -3,7 +3,7 @@ version: '3.7'
 services:
   litecoin:
     image: litecoinproject/litecoin-core:latest
-    container_name: litecoin
+    container_name: notrin-litecoin
     restart: unless-stopped
     command:
       - -printtoconsole
