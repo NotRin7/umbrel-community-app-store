@@ -19,4 +19,4 @@ services:
       - "9332:9332"
       - "9333:9333"
     volumes:
-      - ./data:/home/litecoin/.litecoin
+      - ${APP_DATA_DIR}/data:/home/litecoin/.litecoin:rw
