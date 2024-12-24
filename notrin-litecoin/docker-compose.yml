@@ -7,7 +7,6 @@ services:
     restart: unless-stopped
     command:
       - -printtoconsole
-      - -regtest=1
       - -server=1
       - -rpcuser=testuser
       - -rpcpassword=testpass
