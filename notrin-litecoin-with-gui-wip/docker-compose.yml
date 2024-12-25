@@ -1,0 +1,22 @@
+version: '3.7'
+
+services:
+  litecoin:
+    image: litecoinproject/litecoin-core:latest
+    container_name: litecoin_with_gui
+    restart: unless-stopped
+    command:
+      - -printtoconsole
+      - -server=1
+      - -rpcuser=testuser
+      - -rpcpassword=testpass
+      - -rpcport=9332
+      - -bind=0.0.0.0
+      - -txindex=1
+      - -datadir=/home/litecoin/.litecoin
+    ports:
+      - "9332:9332"
+      - "9333:9333"
+    volumes:
+      - ${APP_DATA_DIR}/data:/home/litecoin/.litecoin:rw
+    user: "1000:1000"

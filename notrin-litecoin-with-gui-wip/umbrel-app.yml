@@ -1,0 +1,26 @@
+manifestVersion: 1
+id: notrin-litecoin-with-gui-wip
+name: Litecoin Node with GUI (WIP)
+tagline: 
+icon: https://i.ibb.co/M22sWmM/proxy-image-4.jpg
+category: Litecoin
+version: "1.1"
+port: 10102
+description: >-
+  Run your Litecoin node and independently store and validate
+  every single Litecoin transaction with it.
+
+developer: Litecoin Comunity
+website: https://litecoin.org
+submitter: NotRin7
+submission:
+repo: https://github.com/litecoin-project/docker-litecoin-core
+support: 
+gallery:
+  - https://i.ibb.co/M22sWmM/proxy-image-4.jpg
+releaseNotes: >
+  
+dependencies: []
+path: ""
+defaultUsername: "testuser"
+defaultPassword: "testpass"
