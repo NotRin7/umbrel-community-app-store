@@ -1,10 +1,10 @@
 manifestVersion: 1
 id: notrin-litecoin
-name: Litecoin
+name: Litecoin Node
 tagline: 
 icon: https://i.ibb.co/M22sWmM/proxy-image-4.jpg
 category: Litecoin
-version: "0.21.2"
+version: "1.1"
 port: 10102
 description: >-
   Run your Litecoin node and independently store and validate
