@@ -4,8 +4,8 @@ name: Mosquitto
 tagline: An open source MQTT broker
 icon: https://i.ibb.co/pyzDXKY/logo-3.jpg
 category: automation
-version: "2.0.20"
-port: 9021
+version: "2.0.21"
+port: 80
 description: >-
   (No GUI)
 
