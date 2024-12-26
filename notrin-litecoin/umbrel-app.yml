@@ -1,32 +1,32 @@
 manifestVersion: 1
 id: notrin-litecoin
 name: Litecoin Node
-tagline: 
+tagline: "Run a Litecoin node to validate transactions."
 icon: https://i.ibb.co/M22sWmM/proxy-image-4.jpg
 category: Litecoin
 version: "1.1.5"
 port: 10102
 description: >-
-(No GUI)
+  (No GUI)
 
-Run your Litecoin node to independently store and validate every Litecoin transaction.
+  Run your Litecoin node to independently store and validate every Litecoin transaction.
 
-The RPC login should be updated.
+  The RPC login should be updated.
 
-The litecoin.conf file is located at
+  The litecoin.conf file is located at:
 
-/home/umbrel/umbrel/app-data/notrin-litecoin/data
+  /home/umbrel/umbrel/app-data/notrin-litecoin/data
 
-developer: Litecoin Comunity
+developer: Litecoin Community
 website: https://litecoin.org
 submitter: NotRin7
 submission:
-repo: https://github.com/litecoin-project/docker-litecoin-core
-support: 
+  repo: https://github.com/litecoin-project/docker-litecoin-core
+support: ""
 gallery:
   - https://i.ibb.co/k44GJZt/log.png
 releaseNotes: >
-  
+  - Minor fixes and improvements.
 dependencies: []
 path: ""
 defaultUsername: "testuser"
