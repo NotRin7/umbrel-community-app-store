@@ -4,12 +4,18 @@ name: Litecoin Node
 tagline: 
 icon: https://i.ibb.co/M22sWmM/proxy-image-4.jpg
 category: Litecoin
-version: "1.1.4"
+version: "1.1.5"
 port: 10102
 description: >-
-  (No GUI)
-  Run your Litecoin node and independently store and validate
-  every single Litecoin transaction with it.
+(No GUI)
+
+Run your Litecoin node to independently store and validate every Litecoin transaction.
+
+The RPC login should be updated.
+
+The litecoin.conf file is located at
+
+/home/umbrel/umbrel/app-data/notrin-litecoin/data
 
 developer: Litecoin Comunity
 website: https://litecoin.org
