@@ -4,17 +4,7 @@ services:
   litecoin:
     image: litecoinproject/litecoin-core:latest
     container_name: litecoin
-    restart: unless-stopped
-    command:
-      - -printtoconsole
-      - -server=1
-      - -rpcuser=testuser
-      - -rpcpassword=testpass
-      - -rpcport=9332
-      - -rpcallowip=0.0.0.0/0
-      - -bind=0.0.0.0:9333
-      - -txindex=1
-      - -datadir=/home/litecoin/.litecoin
+    restart: always
     ports:
       - "9332:9332"
       - "9333:9333"
