@@ -1,20 +1,23 @@
 manifestVersion: 1
-id: notrin-litecoin-with-gui-wip
-name: Litecoin Node with GUI (WIP)
+id: notrin-litepool
+name: Litepool
 tagline: 
 icon: https://i.ibb.co/M22sWmM/proxy-image-4.jpg
 category: Litecoin
 version: "1"
 port: 10102
 description: >-
-  Run your Litecoin node and independently store and validate
-  every single Litecoin transaction with it.
+  Litepool lets you explore and monitor the Litecoin mempool,
+  showing unconfirmed transactions in real-time.
+  It allows you to track pending Litecoin transactions,
+  providing full visibility into the network's transaction flow.
+  Perfect for users who want to keep an eye on transaction activity and network health.
 
-developer: Litecoin Comunity
-website: https://litecoin.org
+developer: Litecoin Foundation
+website: https://litecoinspace.org/
 submitter: NotRin7
 submission:
-repo: https://github.com/litecoin-project/docker-litecoin-core
+repo: https://github.com/litecoin-foundation/ltcspace
 support: 
 gallery:
   - https://i.ibb.co/M22sWmM/proxy-image-4.jpg
@@ -22,5 +25,5 @@ releaseNotes: >
   
 dependencies: []
 path: ""
-defaultUsername: "testuser"
-defaultPassword: "testpass"
+defaultUsername: ""
+defaultPassword: ""

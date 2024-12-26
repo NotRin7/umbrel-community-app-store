@@ -1,21 +1,34 @@
 version: '3.7'
 
 services:
-  litecoin:
-    image: litecoinproject/litecoin-core:latest
-    container_name: litecoin_with_gui
+  ltcspace-api:
+    image: ltcspace/api
+    container_name: ltcspace-api
     restart: unless-stopped
-    command:
-      - -printtoconsole
-      - -server=1
-      - -rpcuser=testuser
-      - -rpcpassword=testpass
-      - -rpcport=9332
-      - -bind=0.0.0.0
-      - -txindex=1
-      - -datadir=/home/litecoin/.litecoin
     ports:
-      - "9332:9332"
-      - "9333:9333"
+      - "8999:8999"
+    environment:
+      MEMPOOL_BACKEND: "none"
+      CORE_RPC_HOST: "127.0.0.1"
+      CORE_RPC_PORT: "9332"
+      CORE_RPC_USERNAME: "testuser"
+      CORE_RPC_PASSWORD: "testpass"
+      NETWORK: "mainnet"
+      MEMPOOL_CACHE_DIR: "/cache"
+      MEMPOOL_CLEAR_PROTECTION_MINUTES: "20"
     volumes:
-      - ${APP_DATA_DIR}/data:/home/litecoin/.litecoin:rw
+      - api_cache:/cache
+
+  ltcspace-frontend:
+    image: ltcspace/frontend
+    container_name: ltcspace-frontend
+    restart: unless-stopped
+    ports:
+      - "10102:80"
+    environment:
+      - API_BASE_URL=http://0.0.0.0:8999/api/v1
+    depends_on:
+      - ltcspace-api
+
+volumes:
+  api_cache:
