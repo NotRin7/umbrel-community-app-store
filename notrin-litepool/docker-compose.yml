@@ -17,7 +17,7 @@ services:
       MEMPOOL_CACHE_DIR: "/cache"
       MEMPOOL_CLEAR_PROTECTION_MINUTES: "20"
     volumes:
-      - api_cache:/cache
+      - ${APP_DATA_DIR}/api_cache:/cache
 
   ltcspace-frontend:
     image: ltcspace/frontend
@@ -29,6 +29,3 @@ services:
       - API_BASE_URL=http://0.0.0.0:8999/api/v1
     depends_on:
       - ltcspace-api
-
-volumes:
-  api_cache:
