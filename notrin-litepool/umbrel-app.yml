@@ -23,7 +23,8 @@ gallery:
   - https://i.ibb.co/M22sWmM/proxy-image-4.jpg
 releaseNotes: >
   
-dependencies: []
+dependencies:
+  - notrin-litecoin
 path: ""
 defaultUsername: ""
 defaultPassword: ""
