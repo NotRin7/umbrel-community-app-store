@@ -13,7 +13,7 @@ services:
         - "2456:2456" # DYNMAP
         - "19132:19132/udp" # BEDROCK
         - "24454:24454/udp" # VoiceChat
-        - "25500-25600:25500-25600" # MC SERV PORT RANGE
+        - "25565:25565" # MC SERV PORT RANGE
     volumes:
         - /Container/Minecraft/backups:/crafty/backups
         - /Container/Minecraft/logs:/crafty/logs
