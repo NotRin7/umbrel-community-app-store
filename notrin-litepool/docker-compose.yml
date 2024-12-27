@@ -1,3 +1,5 @@
+version: "3.7"
+
 services:
   web:
     environment:
@@ -7,9 +9,9 @@ services:
     user: "1000:1000"
     restart: on-failure
     stop_grace_period: 1m
-    command: "./wait-for db:3306 --timeout=720 -- nginx -g 'daemon off;'"
+    command: "${APP_DATA_DIR}/wait-for db:3306 --timeout=720 -- nginx -g 'daemon off;'"
     ports:
-      - "8080:8080"  # Changed host port from 80 to 8080 to avoid conflict
+      - 8080:8080
   api:
     environment:
       MEMPOOL_BACKEND: "none"
