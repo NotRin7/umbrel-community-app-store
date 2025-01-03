@@ -4,7 +4,7 @@ name: Litepool (WIP)
 tagline: 
 icon: https://i.ibb.co/M22sWmM/proxy-image-4.jpg
 category: Litecoin
-version: "1.0.1"
+version: "1.0.2"
 port: 10105
 description: >-
   Litepool lets you explore and monitor the Litecoin mempool,
