@@ -4,7 +4,7 @@ name: Litecoin Node
 tagline: "Run a Litecoin node to validate transactions."
 icon: https://i.ibb.co/M22sWmM/proxy-image-4.jpg
 category: Litecoin
-version: "1.1.9"
+version: "1.2.0"
 port: 10102
 description: >-
   (No GUI)

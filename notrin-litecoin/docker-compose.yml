@@ -10,3 +10,12 @@ services:
       - "9333:9333"
     volumes:
       - ${APP_DATA_DIR}/data:/home/litecoin/.litecoin
+
+  litecoin_node_dashboard:
+    image: notrin7/litecoin_node_dashboard:latest
+    container_name: litecoin_node_dashboard
+    restart: always
+    ports:
+      - "10102:80"
+    environment:
+      - VIRTUAL_HOST=litecoin_node_dashboard.local
