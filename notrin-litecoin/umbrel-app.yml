@@ -31,7 +31,7 @@ gallery:
 releaseNotes: >
   - GUI added in the latest update
 
-  - Real-time data support coming in the next follow-up update
+  - Real-time data support coming in the next follow-up update (1.3.0)
 dependencies: []
 path: ""
 defaultUsername: "testuser"
