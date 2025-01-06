@@ -3,7 +3,6 @@ version: '3.7'
 services:
   litecoin:
     image: litecoinproject/litecoin-core:latest
-    user: "1000:1000"
     container_name: litecoin
     restart: always
     ports:
