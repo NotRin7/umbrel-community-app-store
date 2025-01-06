@@ -4,14 +4,14 @@ name: Litecoin Node
 tagline: "Run a Litecoin node to validate transactions."
 icon: https://i.ibb.co/M22sWmM/proxy-image-4.jpg
 category: Litecoin
-version: "1.2.3"
+version: "1.2.4"
 port: 10102
 description: >-
   (GUI available in the latest update)
 
   Run your Litecoin node to independently store and validate every Litecoin transaction.
 
-  The RPC login has been updated. Please note that this version has been tested only on ARM platforms. Other platforms may have issues or untested features.
+  Please note that this version has been tested only on ARM platforms. Other platforms may have issues or untested features.
 
   The GUI currently does not display real-time data, but this feature is planned for the next follow-up update.
 
@@ -30,6 +30,7 @@ gallery:
   - https://i.ibb.co/k44GJZt/log.png
 releaseNotes: >
   - GUI added in the latest update
+
   - Real-time data support coming in the next follow-up update
 dependencies: []
 path: ""
