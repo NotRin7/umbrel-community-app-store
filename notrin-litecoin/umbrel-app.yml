@@ -7,11 +7,13 @@ category: Litecoin
 version: "1.2.3"
 port: 10102
 description: >-
-  (No GUI)
+  (GUI available in the latest update)
 
   Run your Litecoin node to independently store and validate every Litecoin transaction.
 
-  The RPC login should be updated.
+  The RPC login has been updated. Please note that this version has been tested only on ARM platforms. Other platforms may have issues or untested features.
+
+  The GUI currently does not display real-time data, but this feature is planned for the next follow-up update.
 
   The litecoin.conf file is located at:
 
@@ -22,11 +24,13 @@ website: https://litecoin.org
 submitter: NotRin7
 submission:
   repo: https://github.com/litecoin-project/docker-litecoin-core
-support: ""
+support: "https://github.com/litecoin-project/docker-litecoin-core/issues"
 gallery:
+  - https://i.ibb.co/d4DGSJD/Screenshot-2025-01-06-231135.png
   - https://i.ibb.co/k44GJZt/log.png
 releaseNotes: >
-  - litecoin.conf update
+  - GUI added in the latest update
+  - Real-time data support coming in the next follow-up update
 dependencies: []
 path: ""
 defaultUsername: "testuser"
