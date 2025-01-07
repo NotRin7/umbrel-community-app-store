@@ -10,6 +10,8 @@ services:
       - "9333:9333"
     volumes:
       - ${APP_DATA_DIR}/data:/home/litecoin/.litecoin
+    networks:
+      - my_network
 
   litecoin_node_dashboard:
     image: notrin7/litecoin_node_dashboard:latest
@@ -19,3 +21,20 @@ services:
       - "10102:80"
     environment:
       - VIRTUAL_HOST=litecoin_node_dashboard.local
+    networks:
+      - my_network
+
+  flask:
+    image: notrin7/litecoin_node_rpc_flesk:latest  # Dein Flask-Image
+    container_name: flask
+    restart: always
+    ports:
+      - "5000:5000"  # Flask läuft auf Port 5000
+    environment:
+      - RPC_URL=http://litecoin:9332  # Verwende den Litecon-Container über den Namen "litecoin"
+    networks:
+      - my_network
+
+networks:
+  my_network:
+    driver: bridge
