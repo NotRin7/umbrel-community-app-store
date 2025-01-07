@@ -25,7 +25,7 @@ services:
       - litecoin_network
 
   flask:
-    image: notrin7/litecoin_node_rpc_flesk:latest
+    image: notrin7/litecoin_node_rpc_flesk_1:latest
     container_name: litecoin_node_rpc_flesk_1
     restart: always
     ports:
