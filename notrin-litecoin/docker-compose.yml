@@ -14,7 +14,7 @@ services:
       - litecoin_network
 
   litecoin_node_dashboard:
-    image: notrin7/litecoin_node_dashboard:1.3.0
+    image: notrin7/litecoin_node_dashboard_gui:1.3.0
     container_name: litecoin_node_dashboard_1
     restart: always
     ports:
