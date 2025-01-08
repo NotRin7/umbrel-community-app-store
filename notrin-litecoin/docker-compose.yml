@@ -11,13 +11,6 @@ services:
     volumes:
       - ${APP_DATA_DIR}/data:/home/litecoin/.litecoin
 
-  litecoin_node_dashboard:
-    image: notrin7/litecoin_node_dashboard:1.4.0
-    container_name: litecoin_node_dashboard
-    restart: always
-    ports:
-      - "10102:80"
-
   litecoin_node_rpc_flesk:
     image: notrin7/litecoin_node_rpc_flesk:1.3.2
     container_name: litecoin_node_rpc_flesk
@@ -27,3 +20,12 @@ services:
     environment:
       - RPC_IP=litecoin
       - RPC_PORT=9332
+
+  litecoin_node_dashboard:
+    image: notrin7/litecoin_node_dashboard:1.3.0
+    container_name: litecoin_node_dashboard
+    restart: always
+    ports:
+      - "10102:80"
+    environment:
+      - API_IP=litecoin_node_rpc_flesk
