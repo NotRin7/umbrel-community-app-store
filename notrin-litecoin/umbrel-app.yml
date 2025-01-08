@@ -24,8 +24,7 @@ submission:
   repo: https://github.com/litecoin-project/docker-litecoin-core
 support: "https://github.com/litecoin-project/docker-litecoin-core/issues"
 gallery:
-  - https://i.ibb.co/d4DGSJD/Screenshot-2025-01-06-231135.png
-  - https://i.ibb.co/k44GJZt/log.png
+  - https://i.ibb.co/T4FL3pQ/Screenshot-2025-01-08-185725.png
 releaseNotes: >
   - Full GUI now available, providing a more accessible user experience.
 dependencies: []
