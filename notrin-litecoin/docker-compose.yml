@@ -21,7 +21,7 @@ services:
       - RPC_IP=litecoin
       - RPC_PORT=9332
   litecoin_node_dashboard:
-    image: notrin7/litecoin_node_dashboard:1.7.0
+    image: notrin7/litecoin_node_dashboard:1.8.0
     container_name: litecoin_node_dashboard
     restart: always
     ports:
