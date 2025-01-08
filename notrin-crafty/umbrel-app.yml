@@ -1,7 +1,7 @@
 manifestVersion: 1
 id: notrin-crafty
 name: Crafty
-tagline: 
+tagline: "Easily manage your Minecraft server – simple, self-hosted, and user-friendly."
 icon: https://gitlab.com/uploads/-/system/project/avatar/20430749/Crafty_4-0_Logo_square.ico
 category: Hosting
 version: "1.0.4"
