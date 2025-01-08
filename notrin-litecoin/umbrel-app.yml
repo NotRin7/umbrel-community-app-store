@@ -13,6 +13,9 @@ description: >-
 
   by replacing ip_of_umbrel_server with the actual IP address of your Umbrel server.
 
+  After making this change, you will need to restart the Litecoin node for the changes to take effect.
+
+
 
 
   Run your Litecoin node to independently store and validate every Litecoin transaction with an easy-to-use graphical interface. 
