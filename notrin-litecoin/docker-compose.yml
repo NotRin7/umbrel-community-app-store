@@ -21,12 +21,10 @@ services:
       - RPC_IP=litecoin
       - RPC_PORT=9332
   litecoin_node_dashboard:
-    image: notrin7/litecoin_node_dashboard:1.6.0
+    image: notrin7/litecoin_node_dashboard:1.7.0
     container_name: litecoin_node_dashboard
     restart: always
     ports:
       - "10102:80"
-    environment:
-      - API_IP=litecoin_node_rpc_flesk
     depends_on:
       - litecoin_node_rpc_flesk
