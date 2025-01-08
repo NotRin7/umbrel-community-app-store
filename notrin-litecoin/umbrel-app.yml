@@ -7,11 +7,15 @@ category: Litecoin
 version: "1.3.2.5"
 port: 10102
 description: >-
-  (Full GUI now available in this major update)
+  Update the IP address in the Docker Compose file,
+
+  located at /home/umbrel/umbrel/app-data/notrin-litecoin/docker-compose.yml,
+
+  by replacing ip_of_umbrel_server with the actual IP address of your Umbrel server.
+
+
 
   Run your Litecoin node to independently store and validate every Litecoin transaction with an easy-to-use graphical interface. 
-
-  This version has been tested on ARM platforms and may require additional testing on other platforms.
 
   The litecoin.conf file is located at:
 
