@@ -7,7 +7,7 @@ category: Litecoin
 version: "1.3.2.5"
 port: 10102
 description: >-
-  Update the IP address in the Docker Compose file,
+  ⚠️Update the IP address in the Docker Compose file,
 
   located at /home/umbrel/umbrel/app-data/notrin-litecoin/docker-compose.yml,
 
@@ -29,7 +29,7 @@ website: https://litecoin.org
 submitter: NotRin7
 submission:
   repo: https://github.com/litecoin-project/docker-litecoin-core
-support: "https://github.com/litecoin-project/docker-litecoin-core/issues"
+support: "https://github.com/NotRin7/umbrel-community-app-store/issues"
 gallery:
   - https://i.ibb.co/T4FL3pQ/Screenshot-2025-01-08-185725.png
 releaseNotes: >
