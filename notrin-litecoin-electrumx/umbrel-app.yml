@@ -21,7 +21,6 @@ gallery:
 releaseNotes: >
   - GUI now available.
 dependencies:
-  - litecoin
 path: ""
 defaultPassword: ""
 releaseNotes: ""
