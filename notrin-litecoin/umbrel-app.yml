@@ -24,11 +24,11 @@ description: >-
 
   /home/umbrel/umbrel/app-data/notrin-litecoin/data
 
-developer: Litecoin Foundation
+developer: NotRin7
 website: https://litecoin.org
 submitter: NotRin7
 submission:
-  repo: https://github.com/litecoin-project/docker-litecoin-core
+repo: https://github.com/litecoin-project/docker-litecoin-core
 support: "https://github.com/NotRin7/umbrel-community-app-store/issues"
 gallery:
   - https://i.ibb.co/T4FL3pQ/Screenshot-2025-01-08-185725.png
