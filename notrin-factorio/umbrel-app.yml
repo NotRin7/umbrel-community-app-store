@@ -7,8 +7,6 @@ category: Hosting
 version: "1.0.0"
 port: 9711
 description: >
-  Coppy of reddexx but with arm support!
-  
   Install Factorio Server with OFSM Webinterface on Umbrel
   This tool runs on a Factorio server and allows management of the Factorio server, saves, mods and many other features.
   
