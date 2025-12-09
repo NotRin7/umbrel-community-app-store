@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   litecoin:
-    image: litecoinproject/litecoin-core:latest
+    build: ./litecoin-core-build
     container_name: litecoin
     restart: always
     ports:
@@ -12,7 +12,7 @@ services:
       - ${APP_DATA_DIR}/data:/home/litecoin/.litecoin
 
   litecoin_node_rpc_flesk:
-    image: notrin7/litecoin_node_rpc_flesk:1.3.2
+    build: ./api
     container_name: litecoin_node_rpc_flesk
     restart: always
     ports:
@@ -21,7 +21,7 @@ services:
       - RPC_IP=${LITECOIN_NODE_IP}
       - RPC_PORT=${LITECOIN_RPC_PORT}
   litecoin_node_dashboard:
-    image: notrin7/litecoin_node_dashboard:1.3.0
+    build: ./gui
     container_name: litecoin_node_dashboard
     restart: always
     ports:
