@@ -1,7 +1,7 @@
 manifestVersion: 1
 id: notrin-hyperion
 name: Hyperion
-tagline: "Run Hyperion to visualize and control your lighting system."
+tagline: Run Hyperion to visualize and control your lighting system.
 icon: https://i.ibb.co/sHkpTy3/app-icon-umbrel-os.jpg
 category: Tools
 version: "1.0.1"
