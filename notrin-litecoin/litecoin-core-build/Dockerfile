@@ -43,6 +43,6 @@ EXPOSE 9332 9333 19332 19335 19443 19444
 
 ENTRYPOINT ["/entrypoint.sh"]
 
-RUN litecoind -version | grep "Litecoin Core version v${LITECOIN_VERSION}"
+RUN litecoind -version | grep "${LITECOIN_VERSION}"
 
 CMD ["litecoind"]
