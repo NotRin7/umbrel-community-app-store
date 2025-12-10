@@ -1,22 +1,20 @@
 version: '3'
 
 services:
+  app_proxy:
+    environment:
+      APP_HOST: crafty
+      APP_PORT: 8000
+
   crafty:
-    container_name: crafty_container
+    container_name: crafty
     image: registry.gitlab.com/crafty-controller/crafty-4:latest
     restart: always
     environment:
         - TZ=Berlin/Europe
-    ports:
-        - "8500:8000" # HTTP
-        - "8543:8443" # HTTPS
-        - "2456:2456" # DYNMAP
-        - "19132:19132/udp" # BEDROCK
-        - "24454:24454/udp" # VoiceChat
-        - "25565:25565" # MC SERV PORT RANGE
     volumes:
-        - /Container/Minecraft/backups:/crafty/backups
-        - /Container/Minecraft/logs:/crafty/logs
-        - /Container/Minecraft/servers:/crafty/servers
-        - /Container/Minecraft/app/config:/crafty/app/config
-        - /Container/Minecraft/import:/crafty/import
+        - ${APP_DATA_DIR}/backups:/crafty/backups
+        - ${APP_DATA_DIR}/logs:/crafty/logs
+        - ${APP_DATA_DIR}/servers:/crafty/servers
+        - ${APP_DATA_DIR}/app/config:/crafty/app/config
+        - ${APP_DATA_DIR}/import:/crafty/import

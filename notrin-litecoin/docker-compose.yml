@@ -1,6 +1,11 @@
 version: '3.7'
 
 services:
+  app_proxy:
+    environment:
+      APP_HOST: litecoin_node_dashboard
+      APP_PORT: 80
+
   litecoin:
     build: ./litecoin-core-build
     container_name: litecoin
@@ -24,8 +29,6 @@ services:
     build: ./gui
     container_name: litecoin_node_dashboard
     restart: always
-    ports:
-      - "10102:80"
     environment:
       - API_IP=${LITECOIN_LOCALHOST_IP} #ip_of_umbrel_server can be change here, recomnedet to change in exports.sh (can look like this API_IP=192.168.1.2)
     depends_on:
